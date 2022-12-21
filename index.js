@@ -1,7 +1,7 @@
 // Fill in your client ID and client secret that you obtained
 // while registering the application
-const clientID = '5b8837fe0d2ccb36fb64'
-const clientSecret = 'bc4cf18960135ceab41ca5fb7401cd2b115915d4'
+const clientID = '42537773772d769bf66c'
+const clientSecret = 'af7490c0295b7ad2169897707d32cd48147421f2'
 
 const Koa = require('koa');
 const path = require('path');
@@ -15,6 +15,8 @@ const main = serve(path.join(__dirname));
 
 const oauth = async ctx => {
   const requestToken = ctx.request.query.code;
+  console.log('client_id:', clientID);
+  console.log('client_secret:', clientSecret);
   console.log('authorization code:', requestToken);
 
   const tokenResponse = await axios({
@@ -27,6 +29,7 @@ const oauth = async ctx => {
       accept: 'application/json'
     }
   });
+  console.log(`get response`);
 
   const accessToken = tokenResponse.data.access_token;
   console.log(`access token: ${accessToken}`);
