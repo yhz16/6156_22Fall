@@ -42,7 +42,7 @@ const oauth = async ctx => {
   console.log(result.data);
   const name = result.data.name;
 
-  ctx.response.redirect(`/home.html`);
+  ctx.response.redirect(`http://onlinemuseum.s3-website-us-east-1.amazonaws.com/home.html?name=${name}`);
 };
 
 app.use(main);
