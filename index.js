@@ -43,7 +43,7 @@ const oauth = async ctx => {
     }
   });
   console.log(result.data);
-  const name = result.data.name;
+  const name = result.data.login;
 
   ctx.response.redirect(`http://onlinemuseum.s3-website-us-east-1.amazonaws.com/home.html?name=${name}`);
 };
