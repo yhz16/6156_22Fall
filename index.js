@@ -49,6 +49,6 @@ const oauth = async ctx => {
 };
 
 app.use(main);
-app.use(route.get('http://54.167.138.178:8080/oauth/redirect', oauth));
+app.use(route.get('/oauth/redirect', oauth));
 
 app.listen(8080);
