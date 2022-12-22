@@ -65,9 +65,9 @@ function log(obj){
 
 function github_login(obj)
 {
-    var client_id = "5b8837fe0d2ccb36fb64";
+    var client_id = "42537773772d769bf66c";
     var authorize_uri = 'https://github.com/login/oauth/authorize';
-    var redirect_uri = 'http://3.93.246.61:8080/oauth/redirect';
+    var redirect_uri = 'http://54.167.138.178:8080/oauth/redirect';
     var url = authorize_uri.concat("?client_id=", client_id, "&redirect_uri=", redirect_uri);
     location.replace(url)
 }
