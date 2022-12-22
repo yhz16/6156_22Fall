@@ -46,7 +46,7 @@ const oauth = async ctx => {
   const name = result.data.login;
 
   // ctx.response.redirect(`http://onlinemuseum.s3-website-us-east-1.amazonaws.com/home.html?name=${name}`);
-  ctx.response.redirect(`/home.html?name=${name}`);
+  ctx.response.redirect(`file:///C:/Users/youhz/Documents/Study/Fall%202022/Courses/6156%20Cloud%20Computing/cc_frontend%202/cc_frontend/home.html?name=${name}`);
 };
 
 app.use(main);
