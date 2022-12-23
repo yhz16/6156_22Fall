@@ -25,5 +25,5 @@ Implemented PUT, GET, and DELETE for like and comment, respectively,
 and SES support as well.   
 ![Lambda Functions](./images/Lambda%20Functions.png)
 ### Amazon RDS
-Used to store user information, images, likes and comments.
-
+Used to store user information, images, likes and comments.   
+![Databases](./images/Database.png)
