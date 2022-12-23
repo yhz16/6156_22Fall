@@ -15,8 +15,8 @@ const main = serve(path.join(__dirname));
 
 const oauth = async ctx => {
   const requestToken = ctx.request.query.code;
-  console.log('client_id:', clientID);
-  console.log('client_secret:', clientSecret);
+  // console.log('client_id:', clientID);
+  // console.log('client_secret:', clientSecret);
   console.log('authorization code:', requestToken);
 
   const tokenResponse = await axios({
@@ -32,7 +32,7 @@ const oauth = async ctx => {
   console.log(`get response`);
 
   const accessToken = tokenResponse.data.access_token;
-  console.log(`access token: ${accessToken}`);
+  // console.log(`access token: ${accessToken}`);
 
   const result = await axios({
     method: 'get',
