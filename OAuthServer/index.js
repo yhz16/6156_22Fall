@@ -32,7 +32,7 @@ const oauth = async ctx => {
   console.log(`get response`);
 
   const accessToken = tokenResponse.data.access_token;
-  // console.log(`access token: ${accessToken}`);
+  console.log(`access token: ${accessToken}`);
 
   const result = await axios({
     method: 'get',
