@@ -15,8 +15,8 @@ const main = serve(path.join(__dirname));
 
 const oauth = async ctx => {
   const requestToken = ctx.request.query.code;
-  console.log('client_id:', clientID);
-  console.log('client_secret:', clientSecret);
+  // console.log('client_id:', clientID);
+  // console.log('client_secret:', clientSecret);
   console.log('authorization code:', requestToken);
 
   const tokenResponse = await axios({
@@ -32,7 +32,7 @@ const oauth = async ctx => {
   console.log(`get response`);
 
   const accessToken = tokenResponse.data.access_token;
-  console.log(`access token: ${accessToken}`);
+  // console.log(`access token: ${accessToken}`);
 
   const result = await axios({
     method: 'get',
@@ -45,7 +45,7 @@ const oauth = async ctx => {
   console.log(result.data);
   const name = result.data.login;
 
-  ctx.response.redirect(`http://onlinemuseum1.s3-website-us-east-1.amazonaws.com//home.html?name=${name}`);
+  ctx.response.redirect(`http://onlinemuseum1.s3-website-us-east-1.amazonaws.com/home.html?name=${name}`);
 };
 
 app.use(main);
